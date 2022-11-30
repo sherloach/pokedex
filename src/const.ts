@@ -8,6 +8,15 @@ export interface IStats {
   TOT: string;
 }
 
+export interface ISelectedPokemon {
+  hidden: boolean;
+  handleClosePokemonInfo: () => void;
+}
+
+export interface IPokemonList {
+  handleOpenPokemonInfo: () => void;
+}
+
 export const stats: IStats = {
   HP: '#DF2140',
   ATK: '#FF994D',

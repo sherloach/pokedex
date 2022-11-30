@@ -1,22 +1,30 @@
-import { IStats, stats } from '../../const';
+import { ISelectedPokemon, IStats, stats } from '../../../const';
 
-const SelectedPokemonMobile = () => {
+const SelectedPokemon: React.FC<ISelectedPokemon> = ({
+  hidden,
+  handleClosePokemonInfo,
+}) => {
   return (
     <>
       <div
+        hidden={hidden}
         id="current-pokemon-mobile-background"
         className="fixed left-0 z-[1] h-full w-full bg-[#78cd54]"
       />
       <div
+        hidden={hidden}
         id="current-pokemon-mobile-close"
         className="fixed top-[10px] right-[10px] z-[2] h-[42px] cursor-pointer rounded-lg bg-[#F6F8Fc] p-[10px] duration-300"
+        onTouchStart={handleClosePokemonInfo}
       >
         <img src="src/assets/close-icon.png" alt="close icon" />
       </div>
 
       <div
         id="current-pokemon-container"
-        className="column center container fixed left-[50%] bottom-0 z-[2] m-0 h-[82vh] translate-x-[-50%] rounded-tl-[20px] rounded-tr-[20px] bg-[#FFFFFF] px-4 text-center"
+        className={`column center container fixed left-[50%] bottom-0 z-[2] m-0 h-[82vh] translate-x-[-50%] rounded-tl-[20px] rounded-tr-[20px] bg-[#FFFFFF] px-4 text-center ${
+          hidden ? 'hidden animate-slideOut' : 'animate-slideIn'
+        }`}
       >
         <img
           id="current-pokemon-image"
@@ -161,4 +169,4 @@ const SelectedPokemonMobile = () => {
   );
 };
 
-export default SelectedPokemonMobile;
+export default SelectedPokemon;

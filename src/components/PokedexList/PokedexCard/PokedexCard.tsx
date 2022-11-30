@@ -1,6 +1,11 @@
-const PokedexCard = () => {
+import { IPokemonList } from '../../../const';
+
+const PokedexCard: React.FC<IPokemonList> = ({ handleOpenPokemonInfo }) => {
   return (
-    <div className="wrapper center column relative mt-[50px] min-w-[20%] flex-[0.5] cursor-pointer border-2 border-solid border-white pt-[30px] duration-100 hover:border-[#e0e0e0] md:m-[10px]">
+    <div
+      className="wrapper center column relative mt-[50px] min-w-[20%] flex-[0.5] cursor-pointer border-2 border-solid border-white pt-[30px] duration-100 hover:border-[#e0e0e0] md:m-[10px]"
+      onTouchStart={handleOpenPokemonInfo}
+    >
       <img
         className="image-pixelated absolute top-[-55px] duration-100"
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${1}.png`}
