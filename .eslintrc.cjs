@@ -25,5 +25,6 @@ module.exports = {
     'react/function-component-definition': 0,
     'no-restricted-exports': 0,
     'import/prefer-default-export': 0,
+    'react/prop-types': 0,
   },
 };
