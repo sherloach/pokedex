@@ -10,12 +10,14 @@ const Home = () => {
     setTimeout(() => {
       setHidden(true);
     }, 350);
+    setHidden(true);
   };
 
   const handleOpenPokemonInfo = () => {
     setTimeout(() => {
       setHidden(false);
     }, 350);
+    setHidden(false);
   };
 
   return (

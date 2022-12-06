@@ -4,18 +4,28 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
-        slideOut: {
+        slideOutWeb: {
           '0%': { right: 'calc(5vw)' },
           '100%': { right: '-400px' },
         },
-        slideIn: {
+        slideInWeb: {
           '0%': { right: '-400px' },
           '100%': { right: '5vw' },
         },
+        slideOutMobile: {
+          '0%': { bottom: '0' },
+          '100%': { bottom: '-100vh' },
+        },
+        slideInMobile: {
+          '0%': { bottom: '-100vh' },
+          '100%': { bottom: '0' },
+        },
       },
       animation: {
-        slideOut: 'slideOut ease-in-out 0.35s forwards',
-        slideIn: 'slideIn ease-in-out 0.35s forwards',
+        slideOutWeb: 'slideOutWeb ease-in-out 0.35s forwards',
+        slideInWeb: 'slideInWeb ease-in-out 0.35s forwards',
+        slideOutMobile: 'slideOutMobile ease-in-out 0.35s forwards',
+        slideInMobile: 'slideInMobile ease-in-out 0.35s forwards',
       },
     },
     container: {
