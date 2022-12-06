@@ -5,12 +5,12 @@ module.exports = {
     extend: {
       keyframes: {
         slideOut: {
-          '0%': { right: 'calc(10vw - 20px)' },
+          '0%': { right: 'calc(5vw)' },
           '100%': { right: '-400px' },
         },
         slideIn: {
           '0%': { right: '-400px' },
-          '100%': { right: 'calc(10vw - 20px)' },
+          '100%': { right: '5vw' },
         },
       },
       animation: {
