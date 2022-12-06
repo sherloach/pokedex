@@ -9,7 +9,7 @@ const SelectedPokemon: React.FC<ISelectedPokemon> = ({
       <div
         hidden={hidden}
         id="current-pokemon-mobile-background"
-        className="fixed left-0 z-[1] h-full w-full bg-[#78cd54]"
+        className="fixed left-0 z-[1] h-full w-full bg-[#78cd54] lg:hidden"
       />
       <div
         hidden={hidden}
@@ -22,9 +22,9 @@ const SelectedPokemon: React.FC<ISelectedPokemon> = ({
 
       <div
         id="current-pokemon-container"
-        className={`column center container fixed left-[50%] bottom-0 z-[2] m-0 h-[82vh] translate-x-[-50%] rounded-tl-[20px] rounded-tr-[20px] bg-[#FFFFFF] px-4 text-center ${
+        className={`column center fixed left-[50%] bottom-0 z-[2] m-0 h-[82vh] w-full translate-x-[-50%] rounded-tl-[20px] rounded-tr-[20px] bg-[#FFFFFF] px-4 text-center ${
           hidden ? 'hidden animate-slideOut' : 'animate-slideIn'
-        }`}
+        } lg:left-unset lg:mx-[10px] lg:w-[345px] lg:translate-x-0 lg:shadow-[0_10px_10px_#ededed]`}
       >
         <img
           id="current-pokemon-image"
@@ -135,7 +135,7 @@ const SelectedPokemon: React.FC<ISelectedPokemon> = ({
                 id="current-pokemon-evolution-0"
                 alt="evolution pokemon"
                 className="current-pokemon-evolution-image"
-                src="./src/assets/pokeball-icon.png"
+                src="	https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
               />
               <div
                 id="current-pokemon-evolution-level-0"
@@ -147,7 +147,7 @@ const SelectedPokemon: React.FC<ISelectedPokemon> = ({
                 id="current-pokemon-evolution-1"
                 alt="evolution pokemon"
                 className="current-pokemon-evolution-image"
-                src="./src/assets/pokeball-icon.png"
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
               />
               <div
                 id="current-pokemon-evolution-level-1"
@@ -159,7 +159,7 @@ const SelectedPokemon: React.FC<ISelectedPokemon> = ({
                 id="current-pokemon-evolution-2"
                 alt="evolution pokemon"
                 className="current-pokemon-evolution-image"
-                src="./src/assets/pokeball-icon.png"
+                src="	https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png"
               />
             </div>
           </div>

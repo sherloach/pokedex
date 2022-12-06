@@ -20,7 +20,7 @@ const Home = () => {
 
   return (
     <>
-      <div id="pokedex-list" className="column w-full">
+      <div id="pokedex-list" className="column w-full lg:mr-[365px]">
         <SearchBar />
         <PokedexList handleOpenPokemonInfo={handleOpenPokemonInfo} />
       </div>

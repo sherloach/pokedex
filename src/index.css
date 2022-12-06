@@ -33,6 +33,10 @@ body {
   flex-direction: row;
 }
 
+#current-pokemon-info::-webkit-scrollbar {
+  display: none;
+}
+
 @layer base {
   h1,
   h2,
@@ -77,6 +81,10 @@ body {
 }
 
 @layer utilities {
+  .left-unset {
+    left: unset;
+  }
+
   .image-pixelated {
     image-rendering: pixelated;
   }

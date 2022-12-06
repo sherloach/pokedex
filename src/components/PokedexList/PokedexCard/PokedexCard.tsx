@@ -3,7 +3,7 @@ import { IPokemonList } from '../../../const';
 const PokedexCard: React.FC<IPokemonList> = ({ handleOpenPokemonInfo }) => {
   return (
     <div
-      className="wrapper center column relative mt-[50px] min-w-[20%] flex-[0.5] cursor-pointer border-2 border-solid border-white pt-[30px] duration-100 hover:border-[#e0e0e0] md:m-[10px]"
+      className="wrapper center column relative mt-[50px] min-w-[20%] flex-[0.5] cursor-pointer border-2 border-solid border-white pt-[30px] duration-100 hover:border-[#e0e0e0] md:m-[10px] lg:mt-[60px]"
       onTouchStart={handleOpenPokemonInfo}
     >
       <img
