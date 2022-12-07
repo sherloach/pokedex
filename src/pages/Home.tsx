@@ -8,13 +8,13 @@ const Home = () => {
 
   const handleClosePokemonInfo = () => {
     setTimeout(() => {
-      setHidden(true);
+      setHidden(false);
     }, 350);
   };
 
   const handleOpenPokemonInfo = () => {
     setTimeout(() => {
-      setHidden(false);
+      setHidden(true);
     }, 350);
   };
 
