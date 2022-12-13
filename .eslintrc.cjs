@@ -26,5 +26,7 @@ module.exports = {
     'no-restricted-exports': 0,
     'import/prefer-default-export': 0,
     'react/prop-types': 0,
+    'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
+    'react/no-array-index-key': 0,
   },
 };
