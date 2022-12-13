@@ -9,12 +9,55 @@ export interface IStats {
 }
 
 export interface ISelectedPokemon {
-  hidden: boolean;
-  handleClosePokemonInfo: () => void;
+  isOpen: boolean;
+  toggler: () => void;
 }
 
 export interface IPokemonList {
   handleOpenPokemonInfo: () => void;
+  pokemons: IPokemonObj;
+}
+
+export interface IPokemons {
+  name: string;
+  types: string[];
+}
+
+export interface IPokemonCard {
+  id: string;
+  name: string;
+  types: string[];
+}
+
+export interface IPokemonObj {
+  [key: string]: IPokemons;
+}
+
+export interface IPokemonResponse {
+  name: string;
+  url: string;
+}
+
+export interface ITypes {
+  normal: string;
+  fighting: string;
+  flying: string;
+  poison: string;
+  ground: string;
+  rock: string;
+  bug: string;
+  ghost: string;
+  steel: string;
+  fire: string;
+  water: string;
+  grass: string;
+  electric: string;
+  psychic: string;
+  ice: string;
+  dragon: string;
+  dark: string;
+  fairy: string;
+  shadow: string;
 }
 
 export const stats: IStats = {
@@ -47,4 +90,9 @@ export const typeColors = {
   dark: '#785442',
   fairy: '#FFACFF',
   shadow: '#0E2E4C',
+};
+
+export const APIs = {
+  pokemon: 'https://pokeapi.co/api/v2/pokemon/?limit=1154',
+  type: 'https://pokeapi.co/api/v2/type/',
 };

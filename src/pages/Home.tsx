@@ -1,33 +1,32 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import PokedexList from '../components/PokedexList';
 import SearchBar from '../components/SearchBar';
+import { APIs, IPokemonObj } from '../const';
 import SelectedPokemon from '../components/PokedexList/SelectedPokemon';
+import useToggle from '../hooks/useToggle';
+import { getAllPokemonWithNameAndTypes } from '../utils';
 
 const Home = () => {
-  const [hidden, setHidden] = useState(false);
+  const [isOpen, toggler] = useToggle();
+  const [pokemons, setPokemon] = useState<IPokemonObj>({});
 
-  const handleClosePokemonInfo = () => {
-    setTimeout(() => {
-      setHidden(false);
-    }, 350);
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await (await fetch(APIs.pokemon)).json();
+      const pokemonData = await getAllPokemonWithNameAndTypes(response.results);
+      setPokemon(pokemonData);
+    };
 
-  const handleOpenPokemonInfo = () => {
-    setTimeout(() => {
-      setHidden(true);
-    }, 350);
-  };
+    fetchData();
+  }, []);
 
   return (
     <>
       <div id="pokedex-list" className="column w-full lg:mr-[365px]">
         <SearchBar />
-        <PokedexList handleOpenPokemonInfo={handleOpenPokemonInfo} />
+        <PokedexList handleOpenPokemonInfo={toggler} pokemons={pokemons} />
       </div>
-      <SelectedPokemon
-        hidden={hidden}
-        handleClosePokemonInfo={handleClosePokemonInfo}
-      />
+      <SelectedPokemon isOpen={isOpen} toggler={toggler} />
     </>
   );
 };

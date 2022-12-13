@@ -1,21 +1,18 @@
 import { ISelectedPokemon, IStats, stats } from '../../../const';
 
-const SelectedPokemon: React.FC<ISelectedPokemon> = ({
-  hidden,
-  handleClosePokemonInfo,
-}) => {
+const SelectedPokemon: React.FC<ISelectedPokemon> = ({ isOpen, toggler }) => {
   return (
     <>
       <div
-        hidden={!hidden}
+        hidden={!isOpen}
         id="current-pokemon-mobile-background"
         className="fixed left-0 z-[1] h-full w-full bg-[#78cd54] lg:hidden"
       />
       <div
-        hidden={!hidden}
+        hidden={!isOpen}
         id="current-pokemon-mobile-close"
         className="fixed top-[10px] right-[10px] z-[2] h-[42px] cursor-pointer rounded-lg bg-[#F6F8Fc] p-[10px] duration-300 lg:hidden"
-        onTouchStart={handleClosePokemonInfo}
+        onTouchStart={toggler}
       >
         <img src="src/assets/close-icon.png" alt="close icon" />
       </div>
@@ -23,7 +20,7 @@ const SelectedPokemon: React.FC<ISelectedPokemon> = ({
       <div
         id="current-pokemon-container"
         className={`column center fixed left-[50%] bottom-0 z-[2] m-0 h-[82vh] w-full translate-x-[-50%] rounded-tl-[20px] rounded-tr-[20px] bg-[#FFFFFF] px-4 text-center ${
-          !hidden
+          !isOpen
             ? 'animate-slideOutMobile lg:animate-slideOutWeb'
             : 'animate-slideInMobile lg:animate-slideInWeb'
         } lg:left-unset lg:mx-[10px] lg:w-[345px] lg:translate-x-0 lg:shadow-[0_10px_10px_#ededed]`}
