@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import { IPokemonList } from '../../const';
 import PokedexCard from './PokedexCard';
+import { IPokemonList } from '../../const';
 
-const PokedexList: React.FC<IPokemonList> = ({
+export const PokedexList: React.FC<IPokemonList> = ({
   handleOpenPokemonInfo,
   pokemons,
 }) => {

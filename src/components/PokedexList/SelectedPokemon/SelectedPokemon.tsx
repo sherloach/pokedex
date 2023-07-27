@@ -12,11 +12,11 @@ const SelectedPokemon: React.FC<ISelectedPokemon> = ({ isOpen, toggler }) => {
         hidden={!isOpen}
         id="current-pokemon-mobile-close"
         className="fixed top-[10px] right-[10px] z-[2] h-[42px] cursor-pointer rounded-lg bg-[#F6F8Fc] p-[10px] duration-300 lg:hidden"
-        onTouchStart={toggler}
       >
-        <img src="src/assets/close-icon.png" alt="close icon" />
+        <button type="button" onClick={toggler}>
+          <img src="src/assets/close-icon.png" alt="close icon" />
+        </button>
       </div>
-
       <div
         id="current-pokemon-container"
         className={`column center fixed left-[50%] bottom-0 z-[2] m-0 h-[82vh] w-full translate-x-[-50%] rounded-tl-[20px] rounded-tr-[20px] bg-[#FFFFFF] px-4 text-center ${
