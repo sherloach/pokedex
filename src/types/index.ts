@@ -92,7 +92,11 @@ export const typeColors = {
   shadow: '#0E2E4C',
 };
 
-export const APIs = {
-  pokemon: 'https://pokeapi.co/api/v2/pokemon/?limit=1154',
-  type: 'https://pokeapi.co/api/v2/type/',
+export type Pokemon = {
+  id: number;
+  name: string;
+  types: [{ type: { name: string } }];
+  weight: number;
+  height: number;
+  stats: [{ base_stat: number; stat: { name: string } }];
 };

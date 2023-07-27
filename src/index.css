@@ -5,116 +5,70 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Outfit', sans-serif;
-}
-
-html {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
+  border: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #f6f8fc;
-  padding: 0 5vw;
-  font-family: 'Outfit', sans-serif;
-  background-image: url(src/assets/pokeball-icon.png);
-  background-repeat: no-repeat;
-  background-position-x: -180px;
-  background-position-y: -80px;
-  width: 100%;
-  overflow: unset;
+  background: #060b28;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#root {
-  overflow: unset;
-  display: flex;
-  flex-direction: row;
+::-webkit-scrollbar {
+  width: 1rem;
 }
 
-#current-pokemon-info::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar-track {
+  background: #060b28;
 }
 
-@layer base {
-  h1,
-  h2,
-  h3,
-  h4 {
-    @apply m-[5px] text-center font-bold text-[#011030];
-  }
-
-  h2 {
-    @apply text-[24px];
-  }
-
-  h4 {
-    @apply mt-[15px];
-  }
-
-  span {
-    @apply text-[#8F9396];
-  }
+::-webkit-scrollbar-thumb {
+  background-color: #2f5aff;
+  border-radius: 0.5rem;
+  border: 0.25rem solid #060b28;
 }
 
-@layer components {
-  .text-general {
-    @apply m-[5px] text-center text-[#011030];
-  }
+ul {
+  list-style: none;
+}
 
-  .wrapper {
-    @apply rounded-[20px]  bg-white p-[15px] shadow-[0_10px_10px_#ededed];
-  }
+a {
+  text-decoration: none;
+}
 
-  .center {
-    @apply flex items-center justify-center;
-  }
+button {
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
 
-  .column {
-    @apply flex flex-col;
-  }
-
-  .row {
-    @apply flex flex-row;
-  }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @layer utilities {
-  .left-unset {
-    left: unset;
+  .main-container {
+    max-width: 78rem;
+    padding: 0 1rem;
+    margin: 0 auto;
   }
 
-  .image-pixelated {
-    image-rendering: pixelated;
-  }
+  .button {
+    background: linear-gradient(180deg, #151a37 0%, rgba(21, 26, 55, 0) 100%);
+    border: 1px solid #24293f;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
 
-  .pokemon-info-variable-container {
-    width: 100%;
-    background-color: #f6f8fc;
-    padding: 8px 0;
-    border-radius: 30px;
-    margin: 5px;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 
-  .current-pokemon-evolution-image {
-    height: 74px;
-    width: 74px;
-    cursor: pointer;
-    border-radius: 30%;
-  }
-
-  .current-pokemon-evolution-image:hover {
-    background-color: rgba(0, 0, 0, 0.03);
-  }
-
-  .current-pokemon-evolution-level-container {
-    font-weight: bold;
-    font-size: 12px;
-    width: 50px;
-    background-color: #f6f8fc;
-    padding: 8px 0;
-    border-radius: 30px;
-    margin: 5px;
+    font-size: 1rem;
+    line-height: 150%;
+    font-weight: 700;
+    color: #ffffff;
   }
 }
