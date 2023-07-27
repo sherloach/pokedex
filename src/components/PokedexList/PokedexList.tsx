@@ -1,7 +1,5 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-import PokedexCard from './PokedexCard';
 import { IPokemonList } from '../../const';
+import PokedexCard from './PokedexCard';
 
 export const PokedexList: React.FC<IPokemonList> = ({
   handleOpenPokemonInfo,
@@ -10,7 +8,12 @@ export const PokedexList: React.FC<IPokemonList> = ({
   return (
     <div className="xs:grid xs:grid-cols-2 xs:gap-3 sm:grid-cols-3 lg:gap-0 xl:grid-cols-4">
       {Object.keys(pokemons).map((key) => (
-        <div key={key} onClick={handleOpenPokemonInfo}>
+        <div
+          key={key}
+          role="button"
+          aria-hidden
+          onClick={handleOpenPokemonInfo}
+        >
           <PokedexCard
             id={key}
             name={pokemons[key].name}

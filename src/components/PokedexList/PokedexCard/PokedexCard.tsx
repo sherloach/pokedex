@@ -11,9 +11,9 @@ const PokedexCard: React.FC<IPokemonCard> = ({ id, name, types }) => {
       <span className="text-sm font-bold text-[#8F9396]">N° {id}</span>
       <h3 className="text-xl font-bold">{name}</h3>
       <div className="row">
-        {types.map((type, idx) => (
+        {types.map((type) => (
           <div
-            key={idx}
+            key={type}
             style={{ background: typeColors[type as keyof ITypes] }}
             className="m-[5px] mt-[10px] rounded-[5px] py-[3px] px-[7px] text-sm font-semibold text-black opacity-80"
           >

@@ -19,14 +19,35 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'prettier',
+    'simple-import-sort',
+    'import',
+  ],
   rules: {
-    'react/react-in-jsx-scope': 0,
-    'react/function-component-definition': 0,
-    'no-restricted-exports': 0,
-    'import/prefer-default-export': 0,
-    'react/prop-types': 0,
-    'no-plusplus': [2, { allowForLoopAfterthoughts: true }],
-    'react/no-array-index-key': 0,
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
+    'no-restricted-exports': 'off',
+
+    // Typescript
+    '@typescript-eslint/no-unused-vars': 'error',
+
+    // Import/export sorting
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'import/first': 'error',
+    'import/newline-after-import': 'error',
+    'import/no-duplicates': 'error',
+    'import/extensions': 'off',
+    'no-param-reassign': 'off',
   },
 };
