@@ -1,8 +1,8 @@
-import { IPokemonCard, ITypes, typeColors } from '../../../const';
+import { IPokemonCard, ITypes, typeColors } from '../../types';
 
 const PokedexCard: React.FC<IPokemonCard> = ({ id, name, types }) => {
   return (
-    <div className="wrapper center column relative mt-[50px] min-w-[20%] flex-[0.5] cursor-pointer border-2 border-solid border-white pt-[30px] duration-100 hover:border-[#e0e0e0] md:m-[10px] lg:mt-[60px]">
+    <div className="wrapper center column relative mt-[0px] min-w-[20%] flex-[0.5] cursor-pointer border-2 border-solid border-white pt-[30px] duration-100 hover:border-[#e0e0e0] md:m-[10px] lg:mt-[60px]">
       <img
         className="image-pixelated absolute top-[-55px] duration-100"
         src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}

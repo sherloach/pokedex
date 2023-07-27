@@ -1,1 +1,2 @@
-export { default } from './PokedexList';
+// eslint-disable-next-line import/prefer-default-export
+export { default as PokedexList } from './PokedexList';

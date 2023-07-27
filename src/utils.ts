@@ -1,5 +1,5 @@
 /* eslint-disable no-await-in-loop */
-import { APIs, IPokemonObj, IPokemonResponse } from './const';
+import { APIs, IPokemonObj, IPokemonResponse } from './types';
 
 export const getPokemonId = (url: string) => {
   return url.replace('https://pokeapi.co/api/v2/pokemon/', '').replace('/', '');

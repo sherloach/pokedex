@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 const Home = lazy(() => import('./pages/Home'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-export function App() {
+export const App = () => {
   return (
     <Suspense fallback={<>...loading</>}>
       <Routes>
@@ -13,12 +13,12 @@ export function App() {
       </Routes>
     </Suspense>
   );
-}
+};
 
-export function WrappedApp() {
+export const WrappedApp = () => {
   return (
     <BrowserRouter>
       <App />
     </BrowserRouter>
   );
-}
+};

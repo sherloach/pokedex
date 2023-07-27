@@ -1,4 +1,4 @@
-import { ISelectedPokemon, IStats, stats } from '../../../const';
+import { ISelectedPokemon, IStats, stats } from '../../types';
 
 const SelectedPokemon: React.FC<ISelectedPokemon> = ({ isOpen, toggler }) => {
   return (

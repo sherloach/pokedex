@@ -1,10 +1,10 @@
+import { PokedexList } from 'components';
 import { useEffect, useState } from 'react';
 
-import PokedexList from '../components/PokedexList';
-import SelectedPokemon from '../components/PokedexList/SelectedPokemon';
 import SearchBar from '../components/SearchBar';
-import { APIs, IPokemonObj } from '../const';
+import SelectedPokemon from '../components/SelectedPokemon';
 import useToggle from '../hooks/useToggle';
+import { APIs, IPokemonObj } from '../types';
 import { getAllPokemonWithNameAndTypes } from '../utils';
 
 const Home = () => {
