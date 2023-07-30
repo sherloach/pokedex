@@ -11,6 +11,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'plugin:tailwindcss/recommended',
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
@@ -25,6 +26,7 @@ module.exports = {
     'prettier',
     'simple-import-sort',
     'import',
+    'tailwindcss',
   ],
   rules: {
     'react/react-in-jsx-scope': 'off',
