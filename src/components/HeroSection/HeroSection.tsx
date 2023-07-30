@@ -2,6 +2,7 @@ import { Header } from 'components/Layout';
 
 import { ReactComponent as FireDividerIcon } from '@/assets/divider-fire.svg';
 import { ReactComponent as BoltIcon } from '@/assets/icon-bolt.svg';
+import charizardImg from '@/assets/img-charizard-min.png';
 import { ReactComponent as FireTypeIcon } from '@/assets/pokemonTypes/fire.svg';
 import { ReactComponent as FlyingTypeIcon } from '@/assets/pokemonTypes/flying.svg';
 
@@ -54,7 +55,7 @@ const HeroSection = () => {
           <div>
             <img
               className="h-auto w-[30.5rem]"
-              src="src/assets/img-charizard-min.png"
+              src={charizardImg}
               alt="pokemon"
             />
           </div>
