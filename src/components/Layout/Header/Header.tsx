@@ -1,12 +1,10 @@
+import { ReactComponent as PokemonLogo } from '@/assets/logo-pokemon.svg';
+
 const Header = () => {
   return (
     <div className="main-container ">
       <header className="flex items-center justify-between pt-6">
-        <img
-          className="h-12 w-32"
-          src="src/assets/logo-pokemon.svg"
-          alt="pokemon's logo"
-        />
+        <PokemonLogo className="h-12 w-32 xl:h-16 xl:w-[10rem]" />
         <a
           className="cursor-pointer"
           target="_blank"
