@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   border: 0;
@@ -48,7 +50,7 @@ img {
   height: auto;
 }
 
-@layer utilities {
+@layer components {
   .main-container {
     max-width: 78rem;
     padding: 0 1rem;
@@ -70,5 +72,73 @@ img {
     line-height: 150%;
     font-weight: 700;
     color: #ffffff;
+  }
+
+  .pokemon-bg {
+    content: '';
+    display: block;
+    width: 25rem;
+    height: 25rem;
+    background: url('src/assets/background-pokeball.svg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@layer utilities {
+  .hero-bg {
+    background: linear-gradient(rgb(238, 131, 40) 0%, rgb(225, 67, 24) 100%);
+  }
+
+  .divider-horizontal-before {
+    background: linear-gradient(
+      270deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .divider-horizontal-after {
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  .divider-vertical-before {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0) 0%,
+      rgb(255, 255, 255) 100%
+    );
+  }
+
+  .divider-vertical-after {
+    background: linear-gradient(
+      rgb(255, 255, 255) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .parallax > use {
+    @apply animate-[wavesMove_25s_cubic-bezier(0.55,0.5,0.45,0.5)_infinite];
+  }
+
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
   }
 }

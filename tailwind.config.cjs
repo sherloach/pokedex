@@ -4,6 +4,14 @@ module.exports = {
   theme: {
     extend: {
       keyframes: {
+        wavesMove: {
+          '0%': {
+            transform: 'translate3d(-90px, 0, 0)',
+          },
+          '100%': {
+            transform: 'translate3d(85px, 0, 0)',
+          },
+        },
         slideOutWeb: {
           '0%': { right: 'calc(5vw)' },
           '100%': { right: '-400px' },
@@ -40,7 +48,7 @@ module.exports = {
     },
     screens: {
       xs: '378px',
-      sm: '640px',
+      sm: '500px',
       md: '768px',
       lg: '1024px',
       xl: '1280px',
