@@ -1,3 +1,4 @@
+import { ReactComponent as GithubIcon } from '@/assets/logo-github.svg';
 import { ReactComponent as PokemonLogo } from '@/assets/logo-pokemon.svg';
 
 const Header = () => {
@@ -11,7 +12,7 @@ const Header = () => {
           href="https://github.com/sherloach"
           rel="noreferrer"
         >
-          <img src="src/assets/logo-github.svg" alt="github's icon" />
+          <GithubIcon />
         </a>
       </header>
     </div>
