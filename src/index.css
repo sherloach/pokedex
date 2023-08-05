@@ -88,10 +88,6 @@ img {
 }
 
 @layer utilities {
-  .hero-bg {
-    background: linear-gradient(rgb(238, 131, 40) 0%, rgb(225, 67, 24) 100%);
-  }
-
   .divider-horizontal-before {
     background: linear-gradient(
       270deg,
@@ -140,5 +136,19 @@ img {
   .parallax > use:nth-child(4) {
     animation-delay: -5s;
     animation-duration: 20s;
+  }
+
+  .slide::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  .slide::-webkit-scrollbar-track {
+    background: #060b28;
+  }
+
+  .slide::-webkit-scrollbar-thumb {
+    background-color: #2f5aff;
+    border-radius: 0.5rem;
+    border: 0.25rem solid #060b28;
   }
 }
