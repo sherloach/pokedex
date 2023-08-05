@@ -137,18 +137,4 @@ img {
     animation-delay: -5s;
     animation-duration: 20s;
   }
-
-  .slide::-webkit-scrollbar {
-    width: 1rem;
-  }
-
-  .slide::-webkit-scrollbar-track {
-    background: #060b28;
-  }
-
-  .slide::-webkit-scrollbar-thumb {
-    background-color: #2f5aff;
-    border-radius: 0.5rem;
-    border: 0.25rem solid #060b28;
-  }
 }
