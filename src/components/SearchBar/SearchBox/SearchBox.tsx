@@ -2,7 +2,7 @@ import { ReactComponent as SearchIcon } from '@/assets/icon-search.svg';
 
 const SearchBox = () => {
   return (
-    <form className="flex w-full rounded-lg transition duration-300 hover:shadow-[0_0_0_4px_rgb(47,90,255,0.4)]">
+    <form className="flex w-full rounded-lg transition duration-300 hover:shadow-[0_0_0_4px_rgb(47,90,255,0.4)] md:w-[30.5rem]">
       <input
         type="text"
         placeholder="Search Pokémon"

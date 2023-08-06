@@ -49,6 +49,41 @@ const SearchFilter = () => {
             <img src={imgUrl} alt="pokemon's type" />
             Dark
           </button>
+          <button
+            type="button"
+            className="flex shrink-0 items-center gap-2 rounded-lg bg-[#7bcf00] px-2 py-1 text-base font-normal capitalize"
+          >
+            <img src={imgUrl} alt="pokemon's type" />
+            Dark
+          </button>
+          <button
+            type="button"
+            className="flex shrink-0 items-center gap-2 rounded-lg bg-[#7bcf00] px-2 py-1 text-base font-normal capitalize"
+          >
+            <img src={imgUrl} alt="pokemon's type" />
+            Dark
+          </button>
+          <button
+            type="button"
+            className="flex shrink-0 items-center gap-2 rounded-lg bg-[#7bcf00] px-2 py-1 text-base font-normal capitalize"
+          >
+            <img src={imgUrl} alt="pokemon's type" />
+            Dark
+          </button>
+          <button
+            type="button"
+            className="flex shrink-0 items-center gap-2 rounded-lg bg-[#7bcf00] px-2 py-1 text-base font-normal capitalize"
+          >
+            <img src={imgUrl} alt="pokemon's type" />
+            Dark
+          </button>
+          <button
+            type="button"
+            className="flex shrink-0 items-center gap-2 rounded-lg bg-[#7bcf00] px-2 py-1 text-base font-normal capitalize"
+          >
+            <img src={imgUrl} alt="pokemon's type" />
+            Dark
+          </button>
         </div>
       </Slide>
     </div>
