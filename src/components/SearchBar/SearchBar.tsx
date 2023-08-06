@@ -5,7 +5,7 @@ import { SearchFilter } from './SearchFilter';
 const SearchBar = () => {
   return (
     <div className="main-container">
-      <div className="mb-12 mt-14">
+      <div className="mb-12 mt-14 border-b border-solid border-[#24293f] pb-6">
         <HomeButton />
         <div className="mt-5 items-center justify-between gap-6 md:flex">
           <SearchFilter />
