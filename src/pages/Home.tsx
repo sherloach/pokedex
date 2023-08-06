@@ -1,7 +1,12 @@
-import { HeroSection } from '@/components';
+import { HeroSection, SearchBar } from '@/components';
 
 const Home = () => {
-  return <HeroSection />;
+  return (
+    <>
+      <HeroSection />
+      <SearchBar />
+    </>
+  );
 };
 
 export default Home;
