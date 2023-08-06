@@ -88,10 +88,6 @@ img {
 }
 
 @layer utilities {
-  .hero-bg {
-    background: linear-gradient(rgb(238, 131, 40) 0%, rgb(225, 67, 24) 100%);
-  }
-
   .divider-horizontal-before {
     background: linear-gradient(
       270deg,

@@ -1,1 +1,2 @@
-export { default } from './SearchBar';
+// eslint-disable-next-line import/prefer-default-export
+export { default as SearchBar } from './SearchBar';

@@ -10,7 +10,7 @@ import Waves from './Waves/Waves';
 
 const HeroSection = () => {
   return (
-    <div className="hero-bg sm:after:pokemon-bg sm:before:pokemon-bg relative overflow-hidden sm:before:left-[-12.5rem] sm:after:right-[-12.5rem]">
+    <div className="sm:after:pokemon-bg sm:before:pokemon-bg relative overflow-hidden bg-gradient-to-b from-[#ee8328] to-[#e14318] sm:before:left-[-12.5rem] sm:after:right-[-12.5rem]">
       <Header />
       <div className="main-container">
         <div className="relative z-[1] mb-20 mt-14 items-center justify-between sm:mb-40 sm:mt-16 sm:flex sm:flex-col xl:flex-row">
