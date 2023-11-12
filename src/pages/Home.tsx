@@ -1,4 +1,4 @@
-import { HeroSection, PokedexList, SearchBar } from '@/components';
+import { Footer, HeroSection, PokedexList, SearchBar } from '@/components';
 
 const Home = () => {
   return (
@@ -6,6 +6,7 @@ const Home = () => {
       <HeroSection />
       <SearchBar />
       <PokedexList />
+      <Footer />
     </>
   );
 };
