@@ -1,27 +1,19 @@
-import { IPokemonList } from '@/types';
+import { Pagination } from '@/components/Pagination';
+import { PokedexCard } from '@/components/PokedexCard';
 
-import PokedexCard from '../PokedexCard';
-
-const PokedexList: React.FC<IPokemonList> = ({
-  handleOpenPokemonInfo,
-  pokemons,
-}) => {
+const PokedexList = () => {
   return (
-    <div className="xs:grid xs:grid-cols-2 xs:gap-5 sm:grid-cols-3 lg:gap-0 xl:grid-cols-4">
-      {Object.keys(pokemons).map((key) => (
-        <div
-          key={key}
-          role="button"
-          aria-hidden
-          onClick={handleOpenPokemonInfo}
-        >
-          <PokedexCard
-            id={key}
-            name={pokemons[key].name}
-            types={pokemons[key].types}
-          />
+    <div className="main-container">
+      <div className="mb-36">
+        <div className="mt-48 grid gap-x-4 gap-y-40 sm:grid-flow-row md:grid-cols-2 lg:grid-cols-3">
+          {/* Pokemon Card */}
+          <PokedexCard />
+          <PokedexCard />
+          <PokedexCard />
+          <PokedexCard />
         </div>
-      ))}
+        <Pagination />
+      </div>
     </div>
   );
 };

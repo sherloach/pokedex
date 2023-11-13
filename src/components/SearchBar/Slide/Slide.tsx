@@ -45,9 +45,9 @@ const Slide = ({ children }: ISlide) => {
           <LeftArrowIcon />
         </button>
       )}
-      <div className="max-w-full overflow-x-scroll transition-all md:max-w-xs md:overflow-hidden lg:max-w-sm">
+      <div className="max-w-full overflow-x-scroll md:max-w-xs md:overflow-hidden lg:max-w-sm lg:transition-all">
         <div
-          className="flex gap-2 transition-all duration-200"
+          className="flex gap-2 md:transition-all md:duration-200"
           style={{ transform: `translateX(${slidePosition}rem)` }}
         >
           {children}
