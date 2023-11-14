@@ -14,17 +14,14 @@ const PokedexList = () => {
     })();
   }, []);
 
-  console.log('here', pokemonList);
-
   return (
     <div className="main-container">
       <div className="mb-36">
-        <div className="mt-48 grid gap-x-4 gap-y-40 sm:grid-flow-row md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-48 grid gap-x-4 gap-y-40 sm:grid-flow-row md:grid-cols-2 md:gap-y-48 lg:grid-cols-3">
           {/* Pokemon Card */}
-          <PokedexCard />
-          <PokedexCard />
-          <PokedexCard />
-          <PokedexCard />
+          {pokemonList.map((pokemon) => (
+            <PokedexCard key={pokemon.id} pokemon={pokemon} />
+          ))}
         </div>
         <Pagination />
       </div>
