@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable no-await-in-loop */
 import { APIs } from './constants';
 import { IPokemonObj, IPokemonResponse } from './types';
