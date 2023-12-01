@@ -7,6 +7,7 @@ import { Pokemon } from '@/types';
 
 const PokedexList = () => {
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     (async () => {
@@ -23,7 +24,7 @@ const PokedexList = () => {
             <PokedexCard key={pokemon.id} pokemon={pokemon} />
           ))}
         </div>
-        <Pagination />
+        <Pagination page={page} setPage={setPage} />
       </div>
     </div>
   );
