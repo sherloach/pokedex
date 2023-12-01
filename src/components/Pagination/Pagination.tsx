@@ -10,7 +10,6 @@ interface IPagination {
 
 const Pagination: React.FC<IPagination> = ({ page: pageProp, setPage }) => {
   const handleChange = (e: React.ChangeEvent<unknown>, value: number) => {
-    console.log('page', value);
     setPage(value);
   };
 
@@ -21,7 +20,6 @@ const Pagination: React.FC<IPagination> = ({ page: pageProp, setPage }) => {
     onChange: handleChange,
   });
 
-  console.log(items);
   return (
     <div className="mt-10">
       <ul className="flex items-center justify-center gap-2">
@@ -44,9 +42,6 @@ const Pagination: React.FC<IPagination> = ({ page: pageProp, setPage }) => {
               >
                 {page}
               </button>
-              // <C.Button {...item} selected={selected}>
-              //   {page}
-              // </C.Button>
             );
           } else {
             children = (
@@ -57,9 +52,6 @@ const Pagination: React.FC<IPagination> = ({ page: pageProp, setPage }) => {
               >
                 {type === 'previous' ? <LeftArrowIcon /> : <RightArrowIcon />}
               </button>
-              // <C.Button {...item} navigation>
-              //   {type === 'previous' ? <LeftArrowIcon /> : <RightArrowIcon />}
-              // </C.Button>
             );
           }
 
@@ -67,49 +59,6 @@ const Pagination: React.FC<IPagination> = ({ page: pageProp, setPage }) => {
           return <li key={index}>{children}</li>;
         })}
       </ul>
-      {/* <li className="mr-4">
-          <button
-            type="button"
-            className="flex h-8 w-8 items-center justify-center bg-none"
-          >
-            <LeftArrowIcon />
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-lg border-[0.13rem] border-solid bg-none text-base font-bold"
-          >
-            1
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-lg border-[0.13rem] border-solid  bg-none text-base font-bold"
-          >
-            2
-          </button>
-        </li>
-        <li>
-          <span className="block py-3 text-base font-bold">...</span>
-        </li>
-        <li>
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-lg border-[0.13rem] border-solid bg-none text-base font-bold"
-          >
-            3
-          </button>
-        </li>
-        <li className="ml-4">
-          <button
-            type="button"
-            className="flex h-8 w-8 items-center justify-center bg-none"
-          >
-            <RightArrowIcon />
-          </button>
-        </li> */}
     </div>
   );
 };

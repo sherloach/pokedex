@@ -11,9 +11,9 @@ const PokedexList = () => {
 
   useEffect(() => {
     (async () => {
-      setPokemonList(await fetchPokemonList(1));
+      setPokemonList(await fetchPokemonList(page));
     })();
-  }, []);
+  }, [page]);
 
   return (
     <div className="main-container">
