@@ -1,39 +1,8 @@
-/* eslint-disable no-await-in-loop */
-import { APIs } from './constants';
-import { IPokemonObj, IPokemonResponse } from './types';
+/* eslint-disable import/prefer-default-export */
+export const formatPokemonId = (id: number) => {
+  if (id < 10) return `#00${id}`;
 
-export const getPokemonId = (url: string) => {
-  return url.replace('https://pokeapi.co/api/v2/pokemon/', '').replace('/', '');
-};
+  if (id >= 10 && id < 99) return `#0${id}`;
 
-export const getAllPokemonWithNameAndTypes = async (
-  pokemonResult: IPokemonResponse[]
-): Promise<IPokemonObj> => {
-  const pokemons: IPokemonObj = {};
-
-  pokemonResult.map((pokemon: IPokemonResponse) => {
-    const id = getPokemonId(pokemon.url);
-    const newPokemon = {
-      name: pokemon.name,
-      types: [],
-    };
-    pokemons[id] = newPokemon;
-
-    return pokemons;
-  });
-
-  for (let i = 0; i < 18; i++) {
-    const response = await (await fetch(APIs.type + (i + 1))).json();
-    const pokemonInType = response?.pokemon;
-
-    for (let j = 0; j < pokemonInType.length; j++) {
-      const pokemonId = getPokemonId(pokemonInType[j].pokemon.url);
-
-      if (pokemons[pokemonId]) {
-        pokemons[pokemonId].types.push(response.name);
-      }
-    }
-  }
-
-  return pokemons;
+  return `#${id}`;
 };

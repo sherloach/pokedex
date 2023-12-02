@@ -20,6 +20,7 @@ export const pokemonTypes = [
 ];
 
 export const APIs = {
-  pokemon: 'https://pokeapi.co/api/v2/pokemon/?limit=1154',
+  pokemons: 'https://pokeapi.co/api/v2/pokemon?limit=9&offset=',
+  pokemon: 'https://pokeapi.co/api/v2/pokemon/',
   type: 'https://pokeapi.co/api/v2/type/',
 };
